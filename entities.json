@@ -1,0 +1,22 @@
+[
+    {
+        "logo": "superpayments.svg",
+        "link": "https://www.superpayments.com",
+        "text": "If you are doing anything that requires a ledger or anything in the fintech space, take a look at TigerBeetle."
+    },
+    {
+        "logo": "triplezig.svg",
+        "link": "https://www.triplezip.ai",
+        "text": "Truly the easiest part of our stack to set up, which is impressive given that it's our financial ledger."
+    },
+    {
+        "logo": "pesawise.svg",
+        "link": "https://pesawise.com",
+        "text": "TigerBeetle is now our source of truth, and the banks and whatever else we're matching against are secondary."
+    },
+    {
+        "logo": "triple-a.svg",
+        "link": "https://www.triple-a.io",
+        "text": "The structural constraints of TigerBeetle mean we know exactly what everything should be doing. It’s not possible to drop a constraint."
+    }
+]
