@@ -21,7 +21,7 @@
     },
     {
         "logo": "shopwallet.svg",
-        "link": "https://shopwallet.ai",
+        "link": "https://shopwallet.ng",
         "text": "Payments platforms degrade when the ledger is an afterthought. TigerBeetle’s architecture treats the ledger as the CPU-hot, consensus-aware center of your system—not another table in a general database. For a digital-first fintech like ShopWallet, that means higher throughput on fewer machines, stronger guarantees under failure, and cleaner product patterns (authorise/post/void, FX, caps) that ship faster and scale cleaner. In a world chasing LLM gloss, this is the quiet infrastructure that actually moves money."
     }
 ]
