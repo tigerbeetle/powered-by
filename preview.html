@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powering</title>
+    <script type="importmap">
+    {
+        "imports": {
+            "masonry-pf": "https://esm.run/masonry-pf@1.1.1"
+        }
+    }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #222;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .masonry {
+            display: grid;
+            gap: 32px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-rows: masonry;
+            max-width: 1200px;
+        }
+
+        .quote-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            padding: 32px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), radial-gradient(73% 73% at 50% 0%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.00) 100%);
+            height: fit-content;
+            color: #eee;
+            font-family: "Work Sans", sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            text-decoration: none;
+
+            img {
+                max-height: 28px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    </style>
+    <script type="module">
+        import { registerMasonry } from 'masonry-pf';
+
+        registerMasonry(vertical);
+    </script>
+</head>
+
+<body>
+    <div class="masonry" id="vertical"></div>
+
+    <script>
+        async function loadQuotes() {
+            const response = await fetch('entities.json');
+            const data = await response.json();
+            data.sort((a, b) => a.logo.localeCompare(b.logo));
+            const container = document.getElementById('vertical');
+            data.forEach(item => {
+                const box = document.createElement('a');
+                box.className = 'quote-box';
+                box.href = item.link;
+                box.target = "_blank";
+                box.innerHTML = `<img src="logos/${item.logo}"><p>"${item.text}"</p>`;
+                container.appendChild(box);
+            });
+        }
+
+        loadQuotes();
+    </script>
+</body>
+
+</html>
