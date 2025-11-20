@@ -4,7 +4,9 @@ To appear on https://tigerbeetle.com/stories/#powering, add yourself to entities
 
 Note that your logo will appear on a dark background, so it should ideally have light colors and a transparent background.
 
-Then, submit your pull request!
+In the text you can tell the reader who your organization is, what your mission is, and how you use TigerBeetle.
+
+Finally, submit your pull request!
 
 ## Previewing
 
